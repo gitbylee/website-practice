@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="표 만들기 실습 페이지입니다.">
+    <title>표 만들기 연습</title>
+
+    <!-- css -->
+    <style>
+        .table-a {
+            width: 100%;
+            border: 1px solid #333;
+            border-collapse: collapse;
+        }
+        .table-a th, .table-a td{
+            border: 1px solid #333;
+            padding: 10px;
+        }
+
+        .table-b {
+            width: 100%;
+            border-top: 1px solid #333;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .table-b th, .table-b td {
+            border-bottom: 1px solid #333;
+            padding: 10px;
+        }
+
+        .table-c {
+            width: 100%;
+            border-top: 1px solid #333;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .table-c th, .table-c td {
+            padding: 10px;
+            border-bottom: 1px solid #333;
+            border-right: 1px solid #333;
+        }
+        .table-c th:last-child, .table-c td:last-child {
+            border-right: none;
+        }
+
+
+        details {
+            margin-top: 50px;
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>표 기본</h1>
+    <table border="1">
+        <tr>
+            <th>플랜 이름</th>
+            <th>요금</th>
+        </tr>
+        <tr>
+            <td>두근두근 플랜</td>
+            <td>월정액 19,000원</td>
+        </tr>
+        <tr>
+            <td>콩닥콩닥 플랜</td>
+            <td>월정액 19,000원</td>
+        </tr>
+    </table>
+
+    <h1>수평으로 셀 병합</h1>
+    <table border="1">
+        <tr>
+            <th>cell 1</th>
+            <th>cell 2</th>
+            <th>cell 3</th>
+        </tr>
+        <tr>
+            <td>cell 4</td>
+            <td colspan="2">cell 5+6</td>
+        </tr>
+        <tr>
+            <td colspan="3">cell 7+8+9</td>
+        </tr>
+    </table>
+
+    <h1>수직으로 셀 병합</h1>
+    <table border="1">
+        <tr>
+            <th>cell 1</th>
+            <th>cell 2</th>
+        </tr>
+        <tr>
+            <td rowspan="2">cell 3+5</td>
+            <td>cell 4</td>
+        </tr>
+        <tr>
+            <td>cell 6</td>
+        </tr>
+    </table>
+
+    <h1>CSS 적용하기 1</h1>
+    <table class="table-a">
+        <!-- table heads -->
+        <thead>
+          <tr>
+            <th>Lorem</th><th>Ipsum</th><th>Dolor</th>
+          </tr>
+        </thead>
+        <!-- table body -->
+        <tbody>
+          <tr>
+            <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
+          </tr>
+          <tr>
+            <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
+          </tr>
+          <tr>
+            <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
+          </tr>
+          <tr>
+            <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
+          </tr>
+          <tr>
+            <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
+          </tr>
+        </tbody>
+      </table>
+
+    <h1>CSS 적용하기 2</h1>
+    <table class="table-b">
+        <!-- table heads -->
+        <thead>
+          <tr>
+            <th>Lorem</th><th>Ipsum</th><th>Dolor</th>
+          </tr>
+        </thead>
+        <!-- table body -->
+        <tbody>
+          <tr>
+            <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
+          </tr>
+          <tr>
+            <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
+          </tr>
+          <tr>
+            <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
+          </tr>
+          <tr>
+            <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
+          </tr>
+          <tr>
+            <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
+          </tr>
+        </tbody>
+      </table>
+    
+    <h1>CSS 적용하기 3</h1>
+    <table class="table-c">
+        <!-- table heads -->
+        <thead>
+          <tr>
+            <th>Lorem</th><th>Ipsum</th><th>Dolor</th>
+          </tr>
+        </thead>
+        <!-- table body -->
+        <tbody>
+          <tr>
+            <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
+          </tr>
+          <tr>
+            <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
+          </tr>
+          <tr>
+            <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
+          </tr>
+          <tr>
+            <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
+          </tr>
+          <tr>
+            <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
+          </tr>
+        </tbody>
+      </table>
+
+    <details>
+        <summary><u>다 했다면 click!</u></summary>
+        <p>다 만들고 시간이 남은 사람들은 글자폰트 바꿔보기, 표에 색상 적용해보기, 표에 이미지 넣기 등<br>
+           다양하게 구글링해서 표를 더 예쁘게 꾸며주시고, 좋은 기능을 발견했다면 스터디원들이랑 공유도 해봅시당<br>
+           수고했어용</p>
+        <img src="https://cdn.fanzeel.com/images/2018/5addacb24cfab.jpg" alt="보노보노" width="50%">
+    </details>
+    
+</body>
+</html>
