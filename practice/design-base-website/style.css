@@ -141,23 +141,27 @@ header {
 
 /* section3 css */
 .section3 {
-    position: relative;
     background-color: #efefef;
     height: 250px;
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
 }
+.banner {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
 .text-area {
     position: absolute;
     top: 55px;
-    left: 200px;
+    left: 150px;
 }
-.section3 img {
+.img-area img {
     position: absolute;
     width: 370px;
     border-radius: 15px;
     top: 20px;
-    right: 200px;
+    right: 150px;
 }
 
 /* section4 css */
